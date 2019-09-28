@@ -5,7 +5,6 @@ import org.docemonos.hackaton1.backend1.mapper.UserMapper;
 import org.docemonos.hackaton1.backend1.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,13 +32,13 @@ public class UserController {
 
     @DeleteMapping("/{username}")
     @ResponseStatus(code = HttpStatus.ACCEPTED)
-    public void deleteUser(@PathVariable("username") String userName) throws UsernameNotFoundException {
+    public void deleteUser(@PathVariable("username") String userName) {
         userService.deleteUser(userName);
     }
 
     @PutMapping("/{username}")
     @ResponseStatus(code = HttpStatus.OK)
-    public UserDto updateUser(@PathVariable("username") String userName, @RequestBody UserDto userDto) throws UsernameNotFoundException {
+    public UserDto updateUser(@PathVariable("username") String userName, @RequestBody UserDto userDto) {
         return userMapper.userToUserDTO(userService.updateUser(userName,userMapper.userDTOToUser(userDto)));
     }
 }
