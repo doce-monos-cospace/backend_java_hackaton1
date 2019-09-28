@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
 
-@Document("tareas")
+@Document("tasks")
 @Data
 public class Tareas {
 
