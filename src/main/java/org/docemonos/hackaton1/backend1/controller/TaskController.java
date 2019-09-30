@@ -27,6 +27,11 @@ public class TaskController {
     public List<Tareas> getTaskActivas() {
         return taskService.getActivas();
     }
+
+    @GetMapping("/")
+    public List<Tareas> getAllTasks() {
+        return taskService.getAll();
+    }
     
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
