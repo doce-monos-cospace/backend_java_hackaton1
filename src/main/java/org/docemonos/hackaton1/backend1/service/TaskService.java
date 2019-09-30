@@ -10,4 +10,5 @@ public interface TaskService {
 
 	void createTask(Tareas tarea);
 
+    List<Tareas> getAll();
 }

@@ -27,4 +27,9 @@ public class TaskServiceImpl implements TaskService {
 		
 	}
 
+	@Override
+	public List<Tareas> getAll() {
+		return tareasRepository.findAll();
+	}
+
 }

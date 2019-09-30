@@ -385,3 +385,7 @@ $RECYCLE.BIN/
 *.lnk
 
 /.idea/compiler.xml
+/BackendHackaton1.iml
+.idea/
+src/main/resources/static/
+src/main/resources/templates/
